@@ -15,4 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+    // welcome.blade.phpの.blade.phpは書かなくておけ
 });
+
+Route::get( 'hello' , 'HelloController@index' );
+Route::get( 'hello/other' , 'HelloController@other' );
+Route::post( 'hello' , 'HelloController@post');
