@@ -18,6 +18,6 @@ Route::get('/', function () {
     // welcome.blade.phpの.blade.phpは書かなくておけ
 });
 
-Route::get( 'hello' , 'HelloController@index' );
+Route::get( 'hello' , 'HelloController@index' )->middleware(HelloMiddleware::class);
 Route::get( 'hello/other' , 'HelloController@other' );
 Route::post( 'hello' , 'HelloController@post');
